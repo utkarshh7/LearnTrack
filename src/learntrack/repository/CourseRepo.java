@@ -3,9 +3,11 @@ import learntrack.entity.Course;
 import java.util.ArrayList;
 
 public class CourseRepo {
-    private ArrayList<Course> courses;
+    private static ArrayList<Course> courses;
     public CourseRepo(){
-        courses = new ArrayList<>();
+        if(courses == null){
+            courses = new ArrayList<>();
+        }
     }
 
     public void save(Course course){

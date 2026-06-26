@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentService {
-    private StudentRepo students;
+    private static StudentRepo students;
     Scanner scanner = new Scanner(System.in);
 
     public StudentService(){

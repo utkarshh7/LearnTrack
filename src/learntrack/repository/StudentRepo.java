@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class StudentRepo{
 
-    private ArrayList<Student> students;
+    private static ArrayList<Student> students;
     public StudentRepo(){
-        students = new ArrayList<>();
+        if(students == null){
+            students = new ArrayList<>();
+        }
     }
 
     public void save(Student student){

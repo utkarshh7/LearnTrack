@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class EnrollmentRepo {
 
-    private ArrayList<Enrollment> enrollments;
+    private static ArrayList<Enrollment> enrollments;
     public EnrollmentRepo(){
-        enrollments = new ArrayList<>();
+        if(enrollments == null){
+            enrollments = new ArrayList<>();
+        }
     }
 
     public void save(Enrollment enrollment) {
