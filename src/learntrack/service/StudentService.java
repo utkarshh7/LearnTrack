@@ -16,8 +16,9 @@ public class StudentService {
         students = new StudentRepo();
     }
     public void addStudent(){
-
+        System.out.println("Enter Student Name: ");
         String name = scanner.nextLine();
+        System.out.println("Enter Student E-Mail: ");
         String email = scanner.nextLine();
 
         int id = IdGenerator.genStudentId();

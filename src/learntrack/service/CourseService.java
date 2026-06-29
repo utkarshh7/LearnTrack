@@ -17,6 +17,7 @@ public class CourseService {
     }
 
     public void addCourse(){
+        System.out.println("Enter Course Name: ");
         String name = scanner.nextLine();
         int id = IdGenerator.genCourseId();
 

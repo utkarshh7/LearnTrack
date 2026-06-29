@@ -26,11 +26,13 @@ public class EnrollmentService {
     }
 
     public void enrollStudent() throws EntityNotFoundExcep {
+        System.out.println("Enter Student ID for enrollment: ");
         int studentId = scanner.nextInt();
         Student student = students.findById(studentId);
         if(student == null){
             throw new EntityNotFoundExcep("Student Not Found");
         }
+        System.out.println("Enter Course ID to enroll " + student.getName() + " into: ");
         int courseId = scanner.nextInt();
         Course course = courses.findById(courseId);
         if(course == null){
